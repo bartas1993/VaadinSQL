@@ -12,7 +12,8 @@ public class DatabaseConnection {
     Connection connect = null;
     try{
         Class.forName("org.sqlite.JDBC");
-        connect = DriverManager.getConnection("C:\\Users\\barte\\OneDrive\\Desktop\\vaaddemo\\users.db");
+        connect = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\barte\\OneDrive\\Desktop\\vaaddemo\\users.db");
+        return connect;
     }
     catch(SQLException a)
     {
